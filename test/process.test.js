@@ -6,13 +6,13 @@ var should = require('should');
 
 describe('sandbox process interface', function () {
 
-  var _create = function (x, options) {
+  var _create = function (options) {
     return require(__dirname + '/../').create(options);
   };
 
   it('should_process_works_fine', function (done) {
 
-    var _me = _create('process', {
+    var _me = _create({
       'rootdir' : '/home/app1',
       'srcfile' : './a.js',
       'appuid' : '070',
@@ -29,6 +29,8 @@ describe('sandbox process interface', function () {
 
     _me.chdir('/home/app1/a/b/c/../../d');
     _me.cwd().should.eql('/home/app1/a/d');
+
+    _me.send('hello');
 
     _me.execPath.should.eql('/usr/bin/node');
     _me.execArgv.should.eql([]);

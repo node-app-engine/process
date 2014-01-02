@@ -1,6 +1,6 @@
 {
   "name": "nae-process",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Process variable for Node App Engine.",
   "main": "index.js",
   "scripts": {
