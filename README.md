@@ -5,8 +5,6 @@ nae-process
 
 [![NPM](https://nodei.co/npm/nae-process.png?downloads=true&stars=true)](https://nodei.co/npm/nae-process/)
 
-![logo](https://raw.github.com/node-app-engine/process/master/logo.png)
-
 ## About
 
 ## Usage
