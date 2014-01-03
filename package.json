@@ -39,7 +39,7 @@
     "nae", "process", "appengine", "safebox", "environment"
   ],
   "engines": {
-    "node": ">= 0.11.9"
+    "node": ">= 0.10.21"
   },
   "author": "aleafs <zhangxc83@gmail.com> (http://aleafs.github.com)",
   "license": "MIT"
