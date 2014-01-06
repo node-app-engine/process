@@ -37,6 +37,7 @@ describe('sandbox process interface', function () {
     _me.argv.should.eql(['/usr/bin/node', '/home/app1']);
     _me.ARGV.should.eql(['/usr/bin/node', '/home/app1']);
 
+    _me.config.should.eql({});
     _me.env.should.eql({
       'HOME' : '/home/aleafs',
       'USER' : 'aleafs',
@@ -46,7 +47,7 @@ describe('sandbox process interface', function () {
       'USER' : 'aleafs',
     });
 
-    ['config', 'pid', 'version', 'versions', 'arch'].forEach(function (x) {
+    ['pid', 'version', 'versions', 'arch'].forEach(function (x) {
       _me[x].should.eql(process[x]);
     });
 
