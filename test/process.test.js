@@ -13,8 +13,7 @@ describe('sandbox process interface', function () {
   it('should_process_works_fine', function (done) {
 
     var _me = _create({
-      'rootdir' : '/home/app1',
-      'srcfile' : './a.js',
+      'approot' : '/home/app1',
       'appuid' : '070',
       'appuser' : 'aleafs',
     });
@@ -35,8 +34,8 @@ describe('sandbox process interface', function () {
     _me.execPath.should.eql('/usr/bin/node');
     _me.title.should.eql('/usr/bin/node');
     _me.execArgv.should.eql([]);
-    _me.argv.should.eql(['/usr/bin/node', './a.js']);
-    _me.ARGV.should.eql(['/usr/bin/node', './a.js']);
+    _me.argv.should.eql(['/usr/bin/node', '/home/app1']);
+    _me.ARGV.should.eql(['/usr/bin/node', '/home/app1']);
 
     _me.env.should.eql({
       'HOME' : '/home/aleafs',
