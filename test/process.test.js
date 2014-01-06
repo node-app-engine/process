@@ -33,20 +33,21 @@ describe('sandbox process interface', function () {
     _me.send('hello');
 
     _me.execPath.should.eql('/usr/bin/node');
+    _me.title.should.eql('/usr/bin/node');
     _me.execArgv.should.eql([]);
     _me.argv.should.eql(['/usr/bin/node', './a.js']);
     _me.ARGV.should.eql(['/usr/bin/node', './a.js']);
 
     _me.env.should.eql({
-      'HOME' : '/home/app1',
+      'HOME' : '/home/aleafs',
       'USER' : 'aleafs',
     });
     _me.ENV.should.eql({
-      'HOME' : '/home/app1',
+      'HOME' : '/home/aleafs',
       'USER' : 'aleafs',
     });
 
-    ['config', 'pid', 'title', 'version', 'versions', 'arch'].forEach(function (x) {
+    ['config', 'pid', 'version', 'versions', 'arch'].forEach(function (x) {
       _me[x].should.eql(process[x]);
     });
 
